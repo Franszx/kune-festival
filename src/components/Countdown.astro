@@ -9,20 +9,55 @@
   <!-- Exportér img i korrekt size -->
   <!-- <img src="" alt="" />-->
   <p id="days"></p>
+  <p class="letter">D</p>
   <p id="hours"></p>
+  <p class="letter letter2">H</p>
   <p id="mins"></p>
+  <p class="letter letter3">M</p>
   <p id="secs"></p>
+  <p class="letter letter4">S</p>
   <h2 id="end"></h2>
 </div>
 
 <style>
+  @font-face {
+    font-family: KarlaBold;
+    src: url(../../public/fonts/Karla/static/Karla-Bold.ttf);
+  }
+  @font-face {
+    font-family: KarlaRegular;
+    src: url(../../public/fonts/Karla/static/Karla-Regular.ttf);
+  }
   div {
     height: 500px;
     display: flex;
+    position: relative;
   }
+
   p {
-    margin: 2%;
+    margin: 1%;
     font-size: 500%;
+    font-family: KarlaBold;
+    -webkit-text-stroke: 2px black;
+    color: rgb(227, 227, 227);
+  }
+  .letter {
+    position: absolute;
+    left: 8.2%;
+    font-size: 240%;
+    color: rgb(255, 255, 255);
+  }
+
+  .letter2 {
+    left: 15%;
+  }
+
+  .letter3 {
+    left: 23.3%;
+  }
+
+  .letter4 {
+    left: 32%;
   }
 </style>
 
