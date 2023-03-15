@@ -7,9 +7,79 @@ import LineUpMedium from "../components/Line_up_medium.astro";
 ---
 
 <Layout>
-  <!-- <LineUp />
+  <main>
+    <div class="first"></div>
+    <img src="../../public/img/kune_landingIMG.png" alt="" />
+    <div class="second">
+      <h1>MUSIC, ART, PEOPLE, FOOD</h1><h2>19/7-23/7</h2>
+    </div>
+    <!-- <LineUp />
   <LineUpMedium />
   <LineUpSmall /> -->
-  <h1>Astro</h1>
-  <Countdown />
+    <div class="second"></div>
+    <div class="third">
+      <p>
+        BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY
+        TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY
+        TICKET NOW / BUY TICKET NOW
+      </p>
+    </div>
+    <div class="fourth"><Countdown /></div>
+  </main>
 </Layout>
+
+<style>
+  .first {
+    height: 831px;
+    width: 100%;
+    top: 0;
+    background: rgb(249, 203, 140);
+    background: linear-gradient(
+      22deg,
+      rgba(249, 203, 140, 1) 0%,
+      rgba(242, 168, 126, 1) 12%,
+      rgba(231, 141, 91, 1) 26%,
+      rgba(223, 108, 73, 1) 45%,
+      rgba(178, 101, 86, 1) 65%,
+      rgba(167, 74, 74, 1) 81%,
+      rgba(159, 58, 58, 1) 100%
+    );
+  }
+  img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .second {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    color: #fff5e2;
+    font-family: var(--ff-head);
+    text-align: center;
+  }
+  .second h1 {
+    font-size: 550%;
+    font-weight: 700;
+  }
+  .second h2 {
+    font-size: 320%;
+  }
+
+  .third {
+    height: 32px;
+    width: 100%;
+    background-color: black;
+  }
+  .third p {
+    padding-top: 0.5%;
+    color: #fff5e2;
+    text-align: center;
+  }
+
+  .fourth {
+    height: 2908px;
+    background-color: #f6d7b0;
+    background-image: url("../../public/img/line_upLanding.png");
+  }
+</style>
