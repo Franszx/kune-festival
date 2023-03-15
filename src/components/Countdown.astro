@@ -38,7 +38,10 @@
     margin: 1%;
     font-size: 500%;
     font-family: KarlaBold;
-    -webkit-text-stroke: 2px black;
+    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+      #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+      #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+      #000 0px 0px 1px;
     color: rgb(227, 227, 227);
   }
   .letter {
@@ -82,7 +85,8 @@
     document.getElementById("days").innerHTML = days;
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("mins").innerHTML = minutes;
-    document.getElementById("secs").innerHTML = seconds;
+    document.getElementById("secs").innerHTML =
+      seconds < 10 ? "0" + seconds : seconds;
 
     // Display the message when countdown is over
     if (timeleft < 0) {
