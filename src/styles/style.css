@@ -6,6 +6,7 @@
   --accent: ;
   --dark: ;
   --bright: ;
+  --white: #fff;
 
   /* spaces for margins and paddings */
   --space-xxs: calc(var(--space-sm) * 0.25);
@@ -38,14 +39,11 @@
   --br-l: 10px;
   --br-xl: 20px;
   --br-xxl: 50px;
-
-  color: var(--white);
-  font-family: var(--ff);
-  background-color: var(--black);
 }
 /* resets */
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 img {
   max-width: 100%;
