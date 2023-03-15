@@ -1,12 +1,13 @@
 ---
+import Menu from "./Menu.astro";
 ---
 
 <div class="header">
-  <img class="logo" src="../../public/img/logo.png" alt="" />
+  <img class="logo" src="../img/logo.png" alt="" />
   <div class="right_side">
     <!-- Sæt korrekte symboler ind -->
-    <img class="buy_ticket" src="../../public/img/logo.png" alt="" />
-    <img src="../../public/img/logo.png" alt="" />
+    <img class="buy_ticket" src="../img/logo.png" alt="" />
+    <Menu />
   </div>
 </div>
 
@@ -26,6 +27,10 @@
   }
 
   .right_side {
+    /* delete below*/
+    display: flex;
+    gap: 1rem;
+    /* delete above */
     margin-top: 56px;
     margin-right: 56px;
   }
