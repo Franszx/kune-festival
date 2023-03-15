@@ -19,7 +19,7 @@
 
   /* font-families */
   --ff-text: ;
-  --ff-head: ;
+  --ff-head: KarlaRegular;
 
   /* font-weights */
   --fw-n: 400;
@@ -58,6 +58,12 @@ ol {
 }
 /* imports */
 @font-face {
+  font-family: KarlaBold;
+  src: url(../../public/fonts/Karla/static/Karla-Bold.ttf);
+}
+@font-face {
+  font-family: KarlaRegular;
+  src: url(../../public/fonts/Karla/static/Karla-Regular.ttf);
 }
 
 /* styling */
