@@ -9,6 +9,8 @@
 <script src="../scripts/burger.js"></script>
 <style>
   .burger {
+    position: relative;
+    z-index: 99;
     display: block;
     width: 4rem;
     /* height: 2.5rem; */
@@ -30,6 +32,9 @@
     background-color: var(--white);
     margin: 0 0 11px 0px;
     transition: 0.8s;
+  }
+  .burger:hover {
+    /* background-color: var(--button-green); */
   }
   .burger::after {
     margin: 0;
