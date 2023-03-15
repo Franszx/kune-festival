@@ -1,21 +1,15 @@
 ---
-// import { Debug } from "astro/components";
-// const response = await fetch("");
-// const data = await response.json();
-// console.log(data);
 ---
 
 <div>
-  <!-- Exportér img i korrekt size -->
-  <!-- <img src="" alt="" />-->
   <p id="days"></p>
-  <!-- <p class="letter">D</p> -->
+
   <p id="hours"></p>
-  <!-- <p class="letter letter2">H</p> -->
+
   <p id="mins"></p>
-  <!-- <p class="letter letter3">M</p> -->
+
   <p id="secs"></p>
-  <!-- <p class="letter letter4">S</p> -->
+
   <h2 id="end"></h2>
 </div>
 
@@ -31,7 +25,10 @@
     font-size: 500%;
     font-family: var(--ff-text);
     font-weight: var(--fw-b);
-    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+      #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+      #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+      #000 0px 0px 1px;
     color: rgb(227, 227, 227);
   }
   .letter {
@@ -41,17 +38,6 @@
     color: rgb(255, 255, 255);
   }
 
-  /* .letter2 {
-    left: 15%;
-  }
-
-  .letter3 {
-    left: 23.3%;
-  }
-
-  .letter4 {
-    left: 32%;
-  } */
   div > * {
     min-width: 10rem;
     text-align: end;
@@ -89,15 +75,20 @@
 
     // Calculating the days, hours, minutes and seconds left
     var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var hours = Math.floor(
+      (timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
     // Result is output to the specific element
-    document.getElementById("days").innerHTML = days < 100 ? "" + days : days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("mins").innerHTML = minutes;
-    document.getElementById("secs").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML =
+      hours < 10 ? "0" + hours : hours;
+    document.getElementById("mins").innerHTML =
+      minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("secs").innerHTML =
+      seconds < 10 ? "0" + seconds : seconds;
 
     // Display the message when countdown is over
     if (timeleft < 0) {
