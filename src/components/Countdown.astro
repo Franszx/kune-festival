@@ -20,14 +20,6 @@
 </div>
 
 <style>
-  @font-face {
-    font-family: KarlaBold;
-    src: url(../../public/fonts/Karla/static/Karla-Bold.ttf);
-  }
-  @font-face {
-    font-family: KarlaRegular;
-    src: url(../../public/fonts/Karla/static/Karla-Regular.ttf);
-  }
   div {
     height: 500px;
     display: flex;
@@ -37,7 +29,8 @@
   p {
     margin: 1%;
     font-size: 500%;
-    font-family: KarlaBold;
+    font-family: var(--ff-text);
+    font-weight: var(--fw-b);
     text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
     color: rgb(227, 227, 227);
   }
@@ -87,8 +80,7 @@
 
 <script>
   // The data/time we want to countdown to
-  var countDownDate = new Date("Apr 19, 2023 12:00:00").getTime();
-  // var countDownDate = new Date("Jul 19, 2023 12:00:00").getTime();
+  var countDownDate = new Date("Jul 19, 2023 12:00:00").getTime();
 
   // Run myfunc every second
   var myfunc = setInterval(function () {
