@@ -3,6 +3,9 @@ import Footer from "../components/Footer.astro";
 import "../styles/style.css";
 import Header from "../components/Header.astro";
 import Countdown from "../components/Countdown.astro";
+import LineUp from "../components/Line_up.astro";
+import LineUpSmall from "../components/Line_up_small.astro";
+import LineUpMedium from "../components/Line_up_medium.astro";
 ---
 
 <html lang="en">
@@ -15,7 +18,11 @@ import Countdown from "../components/Countdown.astro";
   </head>
   <body>
     <Header />
+
     <h1>Astro</h1>
+    <LineUpSmall />
+    <LineUp />
+    <LineUpMedium />
     <Countdown />
     <Footer />
   </body>
