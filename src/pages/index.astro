@@ -1,22 +1,9 @@
 ---
-import Footer from "../components/Footer.astro";
-import "../styles/style.css";
-import Header from "../components/Header.astro";
+import Layout from "../layout/Layout.astro";
 import Countdown from "../components/Countdown.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Header />
-    <h1>Astro</h1>
-    <Countdown />
-    <Footer />
-  </body>
-</html>
+<Layout>
+  <h1>Astro</h1>
+  <Countdown />
+</Layout>
