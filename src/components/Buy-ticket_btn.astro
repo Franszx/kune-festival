@@ -1,8 +1,9 @@
 ---
-const { variant, size } = Astro.props;
 ---
 
-<a href="#">BUY TICKET</a>
+<a class="buy_ticket_btn" href="#">BUY TICKET</a>
+
+<script src="../scripts/burger.js"></script>
 
 <style>
   a {
@@ -23,5 +24,10 @@ const { variant, size } = Astro.props;
   a:hover {
     color: var(--white);
     background: var(--button-green);
+  }
+  .hidden {
+    transition: 0.4s;
+    opacity: 0;
+    /* display: none; */
   }
 </style>
