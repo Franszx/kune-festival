@@ -1,0 +1,27 @@
+---
+const { variant, size } = Astro.props;
+---
+
+<a href="#">BUY TICKET</a>
+
+<style>
+  a {
+    display: grid;
+    font-family: var(--ff-head);
+    font-size: 1.3rem;
+    background: var(--white);
+    color: var(--button-green);
+    font-weight: var(--fw-xb);
+    border: none;
+    /* box-shadow: 0px 4px 4px #a6a2a2; */
+    filter: drop-shadow(0px 4px 8px #a3a0a0);
+    height: 4rem;
+    width: 12rem;
+    place-items: center;
+    transition: all 0.4s;
+  }
+  a:hover {
+    color: var(--white);
+    background: var(--button-green);
+  }
+</style>

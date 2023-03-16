@@ -1,12 +1,13 @@
 ---
 import Menu from "./Menu.astro";
+import BuyTicketBtn from "../components/Buy-ticket_btn.astro";
 ---
 
 <div class="header">
   <img class="logo" src="img/logo.svg" alt="" />
   <div class="right_side">
     <!-- Sæt korrekte symboler ind -->
-    <img class="buy_ticket" src="../img/logo.png" alt="" />
+    <BuyTicketBtn />
     <Menu />
   </div>
 </div>
@@ -18,7 +19,7 @@ import Menu from "./Menu.astro";
     display: flex;
     /* background-color: rgb(57, 85, 76); */
     width: 100%;
-    height: 200px;
+    height: 150px;
     justify-content: space-between;
   }
   .logo {
@@ -31,10 +32,11 @@ import Menu from "./Menu.astro";
   .right_side {
     /* delete below*/
     display: flex;
-    gap: 1rem;
+    gap: 4rem;
     /* delete above */
-    margin-top: 56px;
+    margin-top: 2rem;
     margin-right: 56px;
+    align-items: center;
   }
 
   .buy_ticket {
