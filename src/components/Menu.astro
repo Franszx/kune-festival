@@ -34,19 +34,21 @@
     margin: 0 0 9px 0px;
     transition: 0.8s;
   }
-  .burger:hover {
-    /* background-color: var(--button-green); */
+  .burger:hover::before,
+  .burger:hover::after,
+  .burger:hover .bar {
+    background-color: var(--button-green);
   }
   .burger::after {
     margin: 0;
   }
   .burger.is-active::before {
     transform: rotate(45deg) translate(10px, 12px);
-    background: var(--button-green);
+    /* background: var(--button-green); */
   }
   .burger.is-active::after {
     transform: rotate(-45deg) translate(7px, -11px);
-    background: var(--button-green);
+    /* background: var(--button-green); */
   }
   /* .burger.is-active::after {
     transform: rotate(-45deg) translate(10px, -11px);
