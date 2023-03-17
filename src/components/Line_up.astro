@@ -20,7 +20,7 @@ import { toAttributeString } from "astro/dist/runtime/server/render/util";
   .container {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* justify-content: center;
     align-items: center; */
     margin: auto;
@@ -43,8 +43,9 @@ import { toAttributeString } from "astro/dist/runtime/server/render/util";
   }
 
   .artist img {
+    aspect-ratio: 1/1;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
     object-fit: cover;
     transition: opacity 0.5s;
