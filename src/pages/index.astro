@@ -5,6 +5,7 @@ import LineUp from "../components/Line_up.astro";
 import LineUpSmall from "../components/Line_up_small.astro";
 import LineUpMedium from "../components/Line_up_medium.astro";
 import Program from "../components/Program.astro";
+import ArtistCard from "../components/ArtistCard.astro";
 ---
 
 <Layout>
@@ -16,96 +17,19 @@ import Program from "../components/Program.astro";
     </div>
     <div class="second"></div>
     <div class="third">
-      <p>
-        BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY
-        TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY
-        TICKET NOW / BUY TICKET NOW
-      </p>
+      <p>BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW</p>
     </div>
-
-    <div class="fourth"><Countdown /></div>
-    <Program />
+    <div class="fourth">
+      <h1>LINE-UP</h1>
+      <div class="boks">
+        <div class="card_large"><ArtistCard /></div>
+        <div class="card_medium"><ArtistCard /></div>
+        <div class="card_small"><ArtistCard /></div>
+      </div>
+      <Countdown />
+    </div>
   </main>
 </Layout>
-
-<style>
-  .first {
-    height: 831px;
-    width: 100%;
-    top: 0;
-    background: rgb(249, 203, 140);
-    background: linear-gradient(
-      22deg,
-      rgba(249, 203, 140, 1) 0%,
-      rgba(242, 168, 126, 1) 12%,
-      rgba(231, 141, 91, 1) 26%,
-      rgba(223, 108, 73, 1) 45%,
-      rgba(178, 101, 86, 1) 65%,
-      rgba(167, 74, 74, 1) 81%,
-      rgba(159, 58, 58, 1) 100%
-    );
-  }
-  img {
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  .second {
-    position: absolute;
-    top: 35%;
-    left: 40%;
-    color: #fff5e2;
-    font-family: var(--ff-head);
-    text-align: center;
-  }
-  .second h1 {
-    font-size: 550%;
-    font-weight: 700;
-  }
-  .second h2 {
-    font-size: 320%;
-  }
-
-  .third {
-    height: 32px;
-    width: 100%;
-    background-color: black;
-  }
-  .third p {
-    padding-top: 0.5%;
-    color: #fff5e2;
-    text-align: center;
-  }
-
-  .fourth {
-    height: 2908px;
-    background-color: #f6d7b0;
-    background-image: url("/img/line_upLanding.png");
-    background-size: cover;
-  }
-</style>
-<div class="fourth">
-  <h1>LINE-UP</h1>
-  <div class="boks">
-    <div class="first_grid">
-      <div class="artist_content">
-        <LineUp />
-      </div>
-      <div class="artist_content">
-        <LineUpSmall />
-      </div>
-    </div><img src="img/streg.png" alt="" class="streg" />
-    <div class="second_grid">
-      <div class="artist_content">
-        <LineUp />
-      </div>
-      <div class="artist_content">
-        <LineUpSmall />
-      </div>
-    </div>
-  </div>
-  <Countdown />
-</div>
 
 <style>
   body {
@@ -116,16 +40,7 @@ import Program from "../components/Program.astro";
     width: 100%;
     top: 0;
     background: rgb(249, 203, 140);
-    background: linear-gradient(
-      22deg,
-      rgba(249, 203, 140, 1) 0%,
-      rgba(242, 168, 126, 1) 12%,
-      rgba(231, 141, 91, 1) 26%,
-      rgba(223, 108, 73, 1) 45%,
-      rgba(178, 101, 86, 1) 65%,
-      rgba(167, 74, 74, 1) 81%,
-      rgba(159, 58, 58, 1) 100%
-    );
+    background: linear-gradient(22deg, rgba(249, 203, 140, 1) 0%, rgba(242, 168, 126, 1) 12%, rgba(231, 141, 91, 1) 26%, rgba(223, 108, 73, 1) 45%, rgba(178, 101, 86, 1) 65%, rgba(167, 74, 74, 1) 81%, rgba(159, 58, 58, 1) 100%);
   }
   img {
     position: absolute;
@@ -212,5 +127,25 @@ import Program from "../components/Program.astro";
   .streg {
     grid-column: 2;
     width: 0.5%;
+  }
+  .card_large {
+    width: 20rem;
+  }
+  .card_medium {
+    width: 12rem;
+  }
+  .card_small {
+    width: 8rem;
+  }
+  @media (max-width: 900px) {
+    .card_large {
+      width: 15rem;
+    }
+    .card_medium {
+      width: 9rem;
+    }
+    .card_small {
+      width: 5rem;
+    }
   }
 </style>
