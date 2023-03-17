@@ -1,10 +1,41 @@
 ---
 import Layout from "../layout/Layout.astro";
 import Countdown from "../components/Countdown.astro";
+import ArtistCard from "../components/ArtistCard.astro";
 ---
 
 <Layout>
-  <Countdown />
+  <main>
+    <h2>19/7-23/7</h2>
+    <h1>LINE-UP</h1>
+    <img src="/img/sol.webp" alt="" />
+    <ArtistCard />
+    <Countdown />
+  </main>
 </Layout>
 
-<style></style>
+<style>
+  body {
+    background-color: var(--bg-peach);
+  }
+  main {
+    /* margin-top: 9rem; */
+  }
+  .artist_grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    margin: auto;
+    /* position: relative; */
+    /* top: 14%; */
+  }
+  h1 {
+    font-family: var(--ff-head);
+    font-weight: var(--fw-xb);
+    font-size: 8rem;
+  }
+  h2 {
+    font-family: var(--ff-head);
+    font-weight: var(--fw-b);
+    font-size: 3rem;
+  }
+</style>
