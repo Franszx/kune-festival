@@ -4,7 +4,29 @@ import Countdown from "../components/Countdown.astro";
 ---
 
 <Layout>
-  <Countdown />
+  <main>
+    <h2>19/7-23/7</h2>
+    <h1>LINE-UP</h1>
+    <img src="/img/sol.webp" alt="" />
+    <Countdown />
+  </main>
 </Layout>
 
-<style></style>
+<style>
+  body {
+    background-color: var(--bg-peach);
+  }
+  main {
+    /* margin-top: 9rem; */
+  }
+  h1 {
+    font-family: var(--ff-head);
+    font-weight: var(--fw-xb);
+    font-size: 8rem;
+  }
+  h2 {
+    font-family: var(--ff-head);
+    font-weight: var(--fw-b);
+    font-size: 3rem;
+  }
+</style>
