@@ -17,14 +17,20 @@ import ArtistCard from "../components/ArtistCard.astro";
     </div>
     <div class="second"></div>
     <div class="third">
-      <p>BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW</p>
+      <p>
+        BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY
+        TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY
+        TICKET NOW / BUY TICKET NOW
+      </p>
     </div>
     <div class="fourth">
       <h1>LINE-UP</h1>
       <div class="boks">
-        <a href="#" class="card_large"><ArtistCard /></a>
-        <a href="#" class="card_medium"><ArtistCard /></a>
-        <a href="#" class="card_small"><ArtistCard /></a>
+        <img class="streg" src="img/streg.png" alt="" />
+        <a href="#" class="first_card card_large"><ArtistCard /></a>
+        <a href="#" class="second_card card_large"><ArtistCard /></a>
+        <a href="#" class="third_card card_small"><ArtistCard /></a>
+        <a href="#" class="fourth_card card_medium"><ArtistCard /></a>
       </div>
       <Countdown />
     </div>
@@ -35,12 +41,22 @@ import ArtistCard from "../components/ArtistCard.astro";
   body {
     background-color: #f6d7b0;
   }
+
   .first {
     height: 831px;
     width: 100%;
     top: 0;
     background: rgb(249, 203, 140);
-    background: linear-gradient(22deg, rgba(249, 203, 140, 1) 0%, rgba(242, 168, 126, 1) 12%, rgba(231, 141, 91, 1) 26%, rgba(223, 108, 73, 1) 45%, rgba(178, 101, 86, 1) 65%, rgba(167, 74, 74, 1) 81%, rgba(159, 58, 58, 1) 100%);
+    background: linear-gradient(
+      22deg,
+      rgba(249, 203, 140, 1) 0%,
+      rgba(242, 168, 126, 1) 12%,
+      rgba(231, 141, 91, 1) 26%,
+      rgba(223, 108, 73, 1) 45%,
+      rgba(178, 101, 86, 1) 65%,
+      rgba(167, 74, 74, 1) 81%,
+      rgba(159, 58, 58, 1) 100%
+    );
   }
   img {
     position: absolute;
@@ -89,7 +105,7 @@ import ArtistCard from "../components/ArtistCard.astro";
     font-size: 790%;
     text-align: center;
     position: relative;
-    top: 10%;
+    top: 8.5%;
   }
 
   .boks {
@@ -137,7 +153,60 @@ import ArtistCard from "../components/ArtistCard.astro";
   .card_small {
     width: 12rem;
   }
-  @media (max-width: 900px) {
+
+  .first_card {
+    grid-column: 1;
+    margin-left: 26%;
+  }
+
+  .second_card {
+    grid-column: 3;
+    margin-left: 16%;
+  }
+
+  .third_card {
+    grid-column: 3;
+    margin-top: -8%;
+    margin-left: 68%;
+  }
+
+  .fourth_card {
+    grid-column: 1;
+    margin-top: -20%;
+    margin-left: 50%;
+  }
+
+  @media (max-width: 1350px) {
+    .fourth h1 {
+      top: 7.5%;
+      font-size: 700%;
+    }
+    .boks {
+      top: 11%;
+    }
+    .first_card {
+      margin-left: 15%;
+    }
+    .fourth_card {
+      margin-top: -25%;
+      margin-left: 40%;
+    }
+  }
+
+  @media (max-width: 1235px) {
+    .fourth h1 {
+      top: 7%;
+      font-size: 600%;
+    }
+  }
+  @media (max-width: 1080px) {
+    .fourth h1 {
+      top: 6%;
+      font-size: 500%;
+    }
+    .boks {
+      top: 8%;
+    }
     .card_large {
       width: 15rem;
     }
@@ -146,6 +215,14 @@ import ArtistCard from "../components/ArtistCard.astro";
     }
     .card_small {
       width: 5rem;
+    }
+    .third_card {
+      margin-top: 0%;
+      margin-left: 60%;
+    }
+    .fourth_card {
+      margin-top: -15%;
+      margin-left: 50%;
     }
   }
 </style>
