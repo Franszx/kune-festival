@@ -33,7 +33,10 @@ import ArtistCard from "../components/ArtistCard.astro";
         <a href="#" class="fifth_card card_large"><ArtistCard /></a>
         <a href="#" class="sixth_card card_small"><ArtistCard /></a>
       </div>
-      <Countdown />
+      <div class="features">
+        <Program />
+        <Countdown />
+      </div>
     </div>
   </main>
 </Layout>
@@ -183,6 +186,10 @@ import ArtistCard from "../components/ArtistCard.astro";
     grid-column: 1;
     margin-top: -22%;
     margin-left: 22%;
+  }
+
+  .features {
+    margin-top: 15%;
   }
   /* Genbrug af ovenstående*/
 
