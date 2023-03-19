@@ -33,10 +33,11 @@ import ArtistCard from "../components/ArtistCard.astro";
         <a href="#" class="fifth_card card_large"><ArtistCard /></a>
         <a href="#" class="sixth_card card_small"><ArtistCard /></a>
       </div>
-      <div class="features">
-        <Program />
-        <Countdown />
-      </div>
+    </div>
+    <div class="features">
+      <Program />
+      <p>COUNTDOWN</p>
+      <Countdown />
     </div>
   </main>
 </Layout>
@@ -189,7 +190,20 @@ import ArtistCard from "../components/ArtistCard.astro";
   }
 
   .features {
-    margin-top: 15%;
+    margin-top: 6%;
+  }
+
+  .features p {
+    text-align: center;
+    margin-top: 8%;
+    font-size: 450%;
+    font-family: var(--ff-text);
+    font-weight: var(--fw-b);
+    color: #ffffff;
+    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
+      #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+      #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+      #000 0px 0px 1px;
   }
   /* Genbrug af ovenstående*/
 
