@@ -32,6 +32,9 @@ import ArtistCard from "../components/ArtistCard.astro";
         <a href="#" class="fourth_card card_medium"><ArtistCard /></a>
         <a href="#" class="fifth_card card_large"><ArtistCard /></a>
         <a href="#" class="sixth_card card_small"><ArtistCard /></a>
+        <a href="#" class="seventh_card card_small"><ArtistCard /></a>
+        <a href="#" class="eighth_card card_medium"><ArtistCard /></a>
+        <a href="#" class="ninth_card card_medium"><ArtistCard /></a>
       </div>
     </div>
     <div class="features">
@@ -141,7 +144,7 @@ import ArtistCard from "../components/ArtistCard.astro";
   .streg {
     grid-column: 2;
     border-left: 4px solid #ffae3b;
-    grid-row: 1/6;
+    grid-row: 1/7;
     border-radius: 15px;
   }
   .card_large {
@@ -156,37 +159,54 @@ import ArtistCard from "../components/ArtistCard.astro";
 
   .first_card {
     grid-column: 1;
-    margin-left: 26%;
+    margin-left: 28%;
     margin-top: 16%;
   }
 
   .second_card {
     grid-column: 3;
-    margin-left: 16%;
+    margin-left: 13%;
   }
 
   .third_card {
     grid-column: 3;
-    margin-top: -18%;
+    margin-top: -22%;
     margin-left: 62%;
   }
 
   .fourth_card {
     grid-column: 1;
-    margin-top: -10%;
-    margin-left: 50%;
+    margin-top: 4%;
+    margin-left: 56%;
   }
 
   .fifth_card {
     grid-column: 3;
-    margin-top: -5%;
-    margin-left: 15%;
+    margin-top: 0%;
+    margin-left: 7%;
   }
 
   .sixth_card {
     grid-column: 1;
     margin-top: -22%;
-    margin-left: 22%;
+    margin-left: 30%;
+  }
+
+  .seventh_card {
+    grid-column: 3;
+    margin-top: 0%;
+    margin-left: 55%;
+  }
+  .eighth_card {
+    grid-column: 1;
+    margin-top: -18%;
+    margin-left: 50%;
+  }
+
+  .ninth_card {
+    grid-column: 3;
+    margin-top: 0%;
+    margin-left: 12%;
   }
 
   .features {
@@ -219,7 +239,7 @@ import ArtistCard from "../components/ArtistCard.astro";
     }
   }
 
-  @media (max-width: 1360px) {
+  @media (max-width: 1405px) {
     .second p::after {
       content: "BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW";
     }
@@ -232,8 +252,8 @@ import ArtistCard from "../components/ArtistCard.astro";
       margin-left: 15%;
     }
     .fourth_card {
-      margin-top: -25%;
-      margin-left: 40%;
+      margin-top: 2%;
+      margin-left: 44%;
     }
   }
 
@@ -247,6 +267,62 @@ import ArtistCard from "../components/ArtistCard.astro";
 
     .fourth h1 {
       font-size: 580%;
+    }
+
+    .card_large {
+      width: 15rem;
+    }
+    .card_medium {
+      width: 10rem;
+    }
+    .card_small {
+      width: 5rem;
+    }
+
+    .first_card {
+      margin-left: 40%;
+      margin-top: 10%;
+    }
+
+    .second_card {
+      margin-top: -2%;
+      margin-left: 13%;
+    }
+
+    .third_card {
+      margin-top: -14%;
+      margin-left: 53%;
+    }
+
+    .fourth_card {
+      margin-top: 2%;
+      margin-left: 62%;
+    }
+
+    /* .fifth_card {
+      grid-column: 3;
+      margin-top: 0%;
+      margin-left: 7%;
+    } */
+
+    .sixth_card {
+      margin-top: -18%;
+      margin-left: 45%;
+    }
+
+    .seventh_card {
+      margin-top: 0%;
+      margin-left: 50%;
+    }
+    .eighth_card {
+      margin-top: -15%;
+      margin-left: 58%;
+    }
+
+    .ninth_card {
+      grid-column: 3;
+      margin-top: 0%;
+      margin-left: 12%;
     }
   }
 
@@ -265,6 +341,58 @@ import ArtistCard from "../components/ArtistCard.astro";
       font-size: 530%;
     }
   }
+
+  @media (max-width: 1100px) {
+    .card_large {
+      width: 14rem;
+    }
+    .card_medium {
+      width: 9rem;
+    }
+    .card_small {
+      width: 4rem;
+    }
+
+    .first_card {
+      margin-left: 26%;
+    }
+
+    .second_card {
+      margin-left: 20%;
+    }
+
+    .third_card {
+      margin-left: 64%;
+    }
+
+    .fourth_card {
+      margin-left: 54%;
+    }
+
+    .fifth_card {
+      margin-left: 12%;
+    }
+
+    .sixth_card {
+      margin-left: 40%;
+    }
+
+    .seventh_card {
+      margin-top: 0%;
+      margin-left: 50%;
+    }
+    .eighth_card {
+      margin-top: -15%;
+      margin-left: 58%;
+    }
+
+    .ninth_card {
+      grid-column: 3;
+      margin-top: 0%;
+      margin-left: 12%;
+    }
+  }
+
   @media (max-width: 1080px) {
     .landing_content {
       top: 26%;
@@ -279,15 +407,6 @@ import ArtistCard from "../components/ArtistCard.astro";
 
     .fourth h1 {
       font-size: 490%;
-    }
-    .card_large {
-      width: 15rem;
-    }
-    .card_medium {
-      width: 9rem;
-    }
-    .card_small {
-      width: 5rem;
     }
   }
 
@@ -305,33 +424,36 @@ import ArtistCard from "../components/ArtistCard.astro";
     .fourth h1 {
       font-size: 430%;
     }
-  }
 
-  /*
- 
+    .fourth {
+      margin-left: 0;
+      margin-right: 0;
+      width: 80%;
+      background-color: #f6d7b0;
+      background-image: url("/img/line_upLanding.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
 
-  @media (max-width: 1235px) {
-    .fourth h1 {
-      top: 7%;
-      font-size: 600%;
-    }
-  }
-  @media (max-width: 1080px) {
-    .fourth h1 {
-      top: 6%;
-      font-size: 500%;
-    }
     .boks {
-      top: 8%;
+      grid-template-columns: 1fr;
     }
-    
-    .third_card {
-      margin-top: 0%;
-      margin-left: 60%;
+    .streg {
+      display: none;
     }
-    .fourth_card {
-      margin-top: -15%;
-      margin-left: 50%;
-    } 
-  }*/
+
+    .first_card,
+    .second_card,
+    .third_card,
+    .fourth_card,
+    .fifth_card,
+    .sixth_card,
+    .seventh_card,
+    .eighth_card,
+    .ninth_card {
+      grid-column: 1;
+      margin: 0;
+      place-self: center;
+    }
+  }
 </style>
