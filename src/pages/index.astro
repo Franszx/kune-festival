@@ -24,15 +24,12 @@ import ArtistCard from "../components/ArtistCard.astro";
       <div class="boks">
         <div class="streg"></div>
         <a href="line-up"><img class="full_lineup" src="img/full_lineup.svg" alt="" /></a>
-        <a href="#" class="first_card card_large"><ArtistCard /></a>
-        <a href="#" class="second_card card_large"><ArtistCard /></a>
-        <a href="#" class="third_card card_small"><ArtistCard /></a>
-        <a href="#" class="fourth_card card_medium"><ArtistCard /></a>
-        <a href="#" class="fifth_card card_large"><ArtistCard /></a>
-        <a href="#" class="sixth_card card_small"><ArtistCard /></a>
-        <a href="#" class="seventh_card card_small"><ArtistCard /></a>
-        <a href="#" class="eighth_card card_medium"><ArtistCard /></a>
-        <a href="#" class="ninth_card card_medium"><ArtistCard /></a>
+        <a href="#" class="first_card card_large"><ArtistCard size="large" /></a>
+        <a href="#" class="second_card card_large"><ArtistCard size="large" /></a>
+        <a href="#" class="third_card card_small"><ArtistCard size="small" /></a>
+        <a href="#" class="fourth_card card_medium"><ArtistCard size="medium" /></a>
+        <a href="#" class="fifth_card card_large"><ArtistCard size="large" /></a>
+        <a href="#" class="sixth_card card_small"><ArtistCard size="small" /></a>
       </div>
     </div>
     <div class="features">
@@ -145,16 +142,6 @@ import ArtistCard from "../components/ArtistCard.astro";
     grid-row: 1/7;
     border-radius: 15px;
   }
-  .card_large {
-    width: 22rem;
-  }
-  .card_medium {
-    width: 15rem;
-  }
-  .card_small {
-    width: 8rem;
-  }
-
   .first_card {
     grid-column: 1;
     margin-left: 28%;
