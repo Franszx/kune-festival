@@ -452,27 +452,36 @@ import ArtistCard from "../components/ArtistCard.astro";
       background-repeat: no-repeat;
     }
 
+    .full_lineup {
+      left: 18%;
+      top: 6%;
+      width: 8%;
+    }
     .boks {
       grid-template-columns: 1fr;
+      margin-top: -5%;
     }
     .streg {
       display: none;
     }
-
+    .fifth_card,
     .first_card,
-    .second_card,
-    .third_card,
-    .fourth_card {
-      grid-column: 1;
+    .second_card {
       margin: 0;
+      grid-column: 1;
       place-self: center;
     }
-    .fifth_card,
+    .third_card,
+    .fourth_card,
     .sixth_card,
     .seventh_card,
     .eighth_card,
     .ninth_card {
       display: none;
     }
+  }
+
+  @media (max-width: 375px) {
+    /*DER MANGLER SERIØST KÆRLIGHED TIL MINI-MOBIL-VIEW*/
   }
 </style>
