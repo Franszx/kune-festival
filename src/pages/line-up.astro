@@ -47,6 +47,7 @@ import ArtistCard from "../components/ArtistCard.astro";
   h2 {
     text-align: center;
     padding-top: 7rem;
+    padding-right: 1rem;
   }
   .solh1 {
     display: grid;
@@ -99,7 +100,7 @@ import ArtistCard from "../components/ArtistCard.astro";
   .line {
     width: 5px;
     height: 100%;
-    border-radius-top: ;
+    border-radius: 3px;
     background-color: #ffae3b;
     grid-area: 1/2/10/3;
   }
@@ -126,6 +127,14 @@ import ArtistCard from "../components/ArtistCard.astro";
     }
     h2 {
       padding-top: 9rem;
+      font-size: 2.5rem;
+      padding-right: 0.5rem;
+    }
+    .solh1 img {
+      height: 400px;
+    }
+    .solh1 h1 {
+      font-size: 7rem;
     }
   }
   @media (max-width: 750px) {
@@ -155,7 +164,39 @@ import ArtistCard from "../components/ArtistCard.astro";
       /* margin-top: -4rem; */
       /* top: -2rem; */
     }
+    h2 {
+      padding-top: 7rem;
+      font-size: 2rem;
+    }
+    .solh1 img {
+      height: 350px;
+    }
+    .solh1 h1 {
+      font-size: 6rem;
+    }
+  }
+  @media (max-width: 500px) {
+    h2 {
+      padding-top: 7rem;
+      font-size: 2rem;
+    }
+    .solh1 img {
+      height: 300px;
+    }
+    .solh1 h1 {
+      font-size: 5rem;
+    }
   }
   @media (max-width: 375px) {
+    h2 {
+      padding-top: 5rem;
+      font-size: 1.5rem;
+    }
+    .solh1 img {
+      height: 250px;
+    }
+    .solh1 h1 {
+      font-size: 4rem;
+    }
   }
 </style>
