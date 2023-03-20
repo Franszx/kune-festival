@@ -78,42 +78,24 @@ import ArtistCard from "../components/ArtistCard.astro";
     grid-template-columns: 1fr;
     grid-template-rows: 10rem 7rem 21rem 10rem 7rem 22rem 10rem;
     position: relative;
-    /* padding-inline: 10rem; */
     width: 80%;
-  }
-  .leftside > * {
   }
   .leftside :nth-child(2n + 1) {
     justify-self: right;
     position: relative;
-    /* top: -3rem; */
-    /* margin-top: -2rem; */
   }
   .leftside :nth-child(2n + 2) {
     justify-self: left;
     position: relative;
-    /* margin-top: -4rem; */
-    /* top: -2rem; */
   }
   .rightside :nth-child(2n + 1) {
     justify-self: right;
     position: relative;
-    /* top: -3rem; */
-    /* margin-top: -2rem; */
   }
   .rightside :nth-child(2n + 2) {
     justify-self: left;
     position: relative;
-    /* margin-top: -4rem; */
-    /* top: -2rem; */
   }
-  a > [data-size="small"] {
-    /* margin-top: -5rem; */
-  }
-  /* .leftside :nth-child(3n + 3) {
-    justify-self: center;
-    margin-top: -4rem;
-  } */
   .line {
     width: 5px;
     height: 100%;
@@ -133,7 +115,43 @@ import ArtistCard from "../components/ArtistCard.astro";
   }
   @media (max-width: 1250px) {
   }
-  @media (max-widt: 930px) {
+  @media (max-width: 930px) {
+    .leftside {
+      width: 90%;
+      grid-template-rows: repeat(7, 17rem);
+    }
+    .rightside {
+      width: 90%;
+      grid-template-rows: repeat(8, 17rem);
+    }
+  }
+  @media (max-width: 750px) {
+    .artist_grid {
+      grid-template-columns: 1fr;
+    }
+    .line {
+      display: none;
+    }
+    .leftside {
+      width: 100%;
+      gap: 0.5rem;
+      grid-template-rows: auto;
+    }
+    .rightside {
+      width: 100%;
+      gap: 0.5rem;
+      grid-template-rows: auto;
+    }
+    .rightside :nth-child(2n + 2) {
+      justify-self: right;
+      /* top: -3rem; */
+      /* margin-top: -2rem; */
+    }
+    .rightside :nth-child(2n + 1) {
+      justify-self: left;
+      /* margin-top: -4rem; */
+      /* top: -2rem; */
+    }
   }
   @media (max-width: 375px) {
   }
