@@ -79,4 +79,26 @@ const { size } = Astro.props;
     font-size: 1rem;
     color: blue;
   }
+
+  @media (max-width: 1100px) {
+    [data-size="large"] {
+      width: 14rem;
+      font-size: 1.6rem;
+    }
+    [data-size="medium"] {
+      width: 9rem;
+      font-size: 1rem;
+    }
+    [data-size="small"] {
+      width: 4rem;
+      font-size: 0.5rem;
+    }
+  }
+
+  @media (max-width: 930px) {
+    .card {
+      width: 16rem;
+      font-size: 1.7rem;
+    }
+  }
 </style>
