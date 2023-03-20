@@ -8,7 +8,7 @@ import Program from "../components/Program.astro";
 import ArtistCard from "../components/ArtistCard.astro";
 ---
 
-<Layout>
+<Layout title="Kune Home">
   <main>
     <div class="first">
       <img class="landingimg" src="img/kune_landingIMG1.png" alt="" />
@@ -23,9 +23,7 @@ import ArtistCard from "../components/ArtistCard.astro";
       <a href="line-up"><h1>LINE-UP</h1></a>
       <div class="boks">
         <div class="streg"></div>
-        <a href="line-up"
-          ><img class="full_lineup" src="img/full_lineup.svg" alt="" /></a
-        >
+        <a href="line-up"><img class="full_lineup" src="img/full_lineup.svg" alt="" /></a>
         <a href="#" class="first_card card_large"><ArtistCard /></a>
         <a href="#" class="second_card card_large"><ArtistCard /></a>
         <a href="#" class="third_card card_small"><ArtistCard /></a>
@@ -200,10 +198,7 @@ import ArtistCard from "../components/ArtistCard.astro";
     font-family: var(--ff-text);
     font-weight: var(--fw-b);
     color: #ffffff;
-    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
-      #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
-      #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
-      #000 0px 0px 1px;
+    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
   }
   /* Genbrug af ovenstående*/
 
@@ -308,7 +303,7 @@ import ArtistCard from "../components/ArtistCard.astro";
   }
 
   /*
- 
+
 
   @media (max-width: 1235px) {
     .fourth h1 {
@@ -324,7 +319,7 @@ import ArtistCard from "../components/ArtistCard.astro";
     .boks {
       top: 8%;
     }
-    
+
     .third_card {
       margin-top: 0%;
       margin-left: 60%;
@@ -332,6 +327,6 @@ import ArtistCard from "../components/ArtistCard.astro";
     .fourth_card {
       margin-top: -15%;
       margin-left: 50%;
-    } 
+    }
   }*/
 </style>
