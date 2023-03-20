@@ -80,9 +80,12 @@
 
     // Result is output to the specific element
     document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("mins").innerHTML = minutes;
-    document.getElementById("secs").innerHTML = seconds;
+    document.getElementById("hours").innerHTML =
+      hours < 10 ? "0" + hours : hours;
+    document.getElementById("mins").innerHTML =
+      minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("secs").innerHTML =
+      seconds < 10 ? "0" + seconds : seconds;
     // document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
     // document.getElementById("mins").innerHTML = minutes < 10 ? "0" + minutes : minutes;
     // document.getElementById("secs").innerHTML = seconds < 10 ? "0" + seconds : seconds;
