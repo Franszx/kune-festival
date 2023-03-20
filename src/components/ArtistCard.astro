@@ -1,7 +1,8 @@
 ---
+const { size } = Astro.props;
 ---
 
-<div class="card">
+<div class="card" data-size={size}>
   <p class="name">Liam Gallagher</p>
   <p class="genre">Rock</p>
 </div>
@@ -15,7 +16,6 @@
     background-position: center;
     overflow: hidden;
     aspect-ratio: 1/1;
-    /* width: 15rem; */
     border-radius: 50%;
   }
   img {
@@ -23,10 +23,9 @@
     height: auto;
   }
   p {
-    color: var(--white);
+    /* color: var(--white); */
     font-family: var(--ff-head);
     font-weight: var(--fw-b);
-    font-size: 2.5rem;
     z-index: 2;
   }
   .name {
@@ -40,9 +39,6 @@
     text-align: center;
     top: 90%;
     transition: 0.3s ease-out;
-  }
-  .genre.hidden {
-    /* dis */
   }
   .card:hover .name {
     top: 45%;
@@ -67,5 +63,20 @@
   .card:hover p {
     opacity: 1;
     color: var(--black);
+  }
+  [data-size="large"] {
+    width: 22rem;
+    font-size: 2.5rem;
+    color: red;
+  }
+  [data-size="medium"] {
+    width: 15rem;
+    font-size: 1.8rem;
+    color: green;
+  }
+  [data-size="small"] {
+    width: 8rem;
+    font-size: 1rem;
+    color: blue;
   }
 </style>
