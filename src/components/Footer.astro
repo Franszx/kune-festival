@@ -81,4 +81,37 @@
   a:hover {
     color: #d8ffbf;
   }
+  @media (max-width: 930px) {
+    svg {
+      width: 60px;
+    }
+  }
+  @media (max-width: 750px) {
+    svg {
+      width: 50px;
+    }
+    .flexcol {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 575px) {
+    footer {
+      height: fit-content;
+    }
+    svg {
+      width: 30px;
+    }
+    .content {
+      grid-template-columns: 1fr;
+    }
+    .flexcol:first-child {
+      order: 1;
+      margin-bottom: 1rem;
+      align-items: center;
+      font-size: 1rem;
+    }
+    .flexcol:last-child {
+      display: none;
+    }
+  }
 </style>
