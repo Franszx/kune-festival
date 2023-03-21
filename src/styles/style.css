@@ -22,8 +22,8 @@
   --space-xxl: calc(var(--space-sm) * 6);
 
   /* font-families */
-  --ff-text: "Karla", sans-serif;
-  --ff-head: "Montserrat", sans-serif;
+  --ff-text: "Karla", sans-serif, cursive;
+  --ff-head: "Montserrat", sans-serif, cursive;
 
   /* font-weights */
   --fw-r: 400;
