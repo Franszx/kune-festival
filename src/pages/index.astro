@@ -23,32 +23,16 @@ import ArtistCard from "../components/ArtistCard.astro";
       <a href="line-up"><h1>LINE-UP</h1></a>
       <div class="boks">
         <div class="streg"></div>
-        <a href="line-up">
-          <img class="full_lineup" src="img/full_lineup.svg" alt="" /></a
-        >
-        <a href="#" class="first_card card_large"><ArtistCard size="large" /></a
-        >
-        <a href="#" class="second_card card_large"
-          ><ArtistCard size="large" /></a
-        >
-        <a href="#" class="third_card card_small"><ArtistCard size="small" /></a
-        >
-        <a href="#" class="fourth_card card_medium"
-          ><ArtistCard size="medium" /></a
-        >
-        <a href="#" class="fifth_card card_large"><ArtistCard size="large" /></a
-        >
-        <a href="#" class="sixth_card card_small"><ArtistCard size="small" /></a
-        >
-        <a href="#" class="seventh_card card_small"
-          ><ArtistCard size="small" /></a
-        >
-        <a href="#" class="eighth_card card_medium"
-          ><ArtistCard size="medium" /></a
-        >
-        <a href="#" class="ninth_card card_medium"
-          ><ArtistCard size="medium" /></a
-        >
+        <a href="line-up"> <img class="full_lineup" src="img/full_lineup.svg" alt="" /></a>
+        <a href="#" class="first_card card_large"><ArtistCard size="large" /></a>
+        <a href="#" class="second_card card_large"><ArtistCard size="large" /></a>
+        <a href="#" class="third_card card_small"><ArtistCard size="small" /></a>
+        <a href="#" class="fourth_card card_medium"><ArtistCard size="medium" /></a>
+        <a href="#" class="fifth_card card_large"><ArtistCard size="large" /></a>
+        <a href="#" class="sixth_card card_small"><ArtistCard size="small" /></a>
+        <a href="#" class="seventh_card card_small"><ArtistCard size="small" /></a>
+        <a href="#" class="eighth_card card_medium"><ArtistCard size="medium" /></a>
+        <a href="#" class="ninth_card card_medium"><ArtistCard size="medium" /></a>
       </div>
     </div>
     <div class="features">
@@ -102,7 +86,7 @@ import ArtistCard from "../components/ArtistCard.astro";
     animation: bouncing-text 15s linear infinite alternate;
     color: #fff5e2;
     display: block;
-    padding: 0.5%;
+    padding: 0.5rem;
   }
 
   @keyframes bouncing-text {
@@ -122,6 +106,7 @@ import ArtistCard from "../components/ArtistCard.astro";
     top: 5%;
     z-index: 15;
     background-color: #ded6c1;
+    background-position: center;
     border-radius: 65px;
   }
 
@@ -135,6 +120,7 @@ import ArtistCard from "../components/ArtistCard.astro";
     background-color: #f6d7b0;
     background-image: url("/img/line_upLanding.png");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
   }
 
@@ -228,10 +214,7 @@ import ArtistCard from "../components/ArtistCard.astro";
     font-family: var(--ff-text);
     font-weight: var(--fw-b);
     color: #ffffff;
-    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
-      #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
-      #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
-      #000 0px 0px 1px;
+    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
   }
   /* Genbrug af ovenstående*/
 
@@ -417,6 +400,12 @@ import ArtistCard from "../components/ArtistCard.astro";
       left: 44%;
       right: 5%;
     }
+    .landingimg {
+      min-width: 200%;
+      position: relative;
+      top: 0;
+      left: -40%;
+    }
 
     .second p::after {
       content: "BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW";
@@ -428,11 +417,14 @@ import ArtistCard from "../components/ArtistCard.astro";
   }
 
   @media (max-width: 930px) {
+    main {
+      margin: auto;
+    }
     .landing_content {
       top: 26%;
-      font-size: 140%;
+      font-size: 100%;
       left: 44%;
-      right: 5%;
+      right: 10%;
     }
     .second p::after {
       content: "BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW";
@@ -451,7 +443,14 @@ import ArtistCard from "../components/ArtistCard.astro";
       background-size: cover;
       background-repeat: no-repeat;
     }
-
+    .features p {
+      text-align: center;
+      margin-top: 8%;
+      font-size: 220%;
+      font-family: var(--ff-text);
+      font-weight: var(--fw-b);
+      color: #ffffff;
+    }
     .full_lineup {
       left: 18%;
       top: 6%;
@@ -460,6 +459,8 @@ import ArtistCard from "../components/ArtistCard.astro";
     .boks {
       grid-template-columns: 1fr;
       margin-top: -5%;
+      gap: 1rem;
+      margin-top: 5rem;
     }
     .streg {
       display: none;
@@ -482,6 +483,56 @@ import ArtistCard from "../components/ArtistCard.astro";
   }
 
   @media (max-width: 375px) {
-    /*DER MANGLER SERIØST KÆRLIGHED TIL MINI-MOBIL-VIEW*/
+    main {
+      margin: auto;
+    }
+    .fourth {
+      width: 100%;
+      background-color: #f6d7b0;
+      background-image: url("/img/line_upLanding.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .fourth h1 {
+      font-size: 50px;
+      padding-top: 42%;
+    }
+    .boks {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 5rem;
+    }
+    .landing_content {
+      top: 48%;
+      font-size: 80%;
+      left: 14%;
+      right: 12%;
+    }
+    .landingimg {
+      min-width: 300%;
+      position: relative;
+      top: 0;
+      left: -60%;
+    }
+    .features p {
+      text-align: center;
+      margin-top: 8%;
+      font-size: 140%;
+      font-family: var(--ff-text);
+      font-weight: var(--fw-b);
+      color: #ffffff;
+      text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+    }
+    .second p::after {
+      content: "BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW";
+      text-align: center;
+      animation: bouncing-text 5s linear infinite alternate;
+      color: #fff5e2;
+      display: block;
+      padding: 0.5rem;
+      font-size: 0.6rem;
+    }
+    /*DER MANGLER SERIØST KÆRLIGHED TIL MiNI-MOBIL-VIEW*/
   }
 </style>
