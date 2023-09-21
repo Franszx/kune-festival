@@ -1,0 +1,51 @@
+---
+---
+
+<a class="buy_ticket_btn" href="#">BUY TICKET</a>
+
+<script src="../scripts/burger.js"></script>
+
+<style>
+  a {
+    display: grid;
+    place-items: center;
+    font-family: var(--ff-head);
+    font-size: 1.3rem;
+    background: var(--white);
+    color: var(--button-green);
+    font-weight: var(--fw-xb);
+    border: none;
+    filter: drop-shadow(0px 4px 8px #a3a0a0);
+    height: 4rem;
+    width: 12rem;
+    opacity: 1;
+    transition: all 0.4s ease;
+  }
+  a:hover {
+    color: var(--white);
+    background: var(--button-green);
+    filter: drop-shadow(0px 4px 4px #817e7e);
+    scale: 1.03;
+  }
+  .hidden {
+    transition: 0.8s ease-in;
+    opacity: 0;
+    /* display: none; */
+  }
+  @media (max-width: 575px) {
+    a {
+      height: 3rem;
+      width: 8rem;
+      font-size: 0.9rem;
+      filter: drop-shadow(0px 3px 3px #817e7e);
+    }
+  }
+  @media (max-width: 375px) {
+    a {
+      font-size: 0.6rem;
+      filter: drop-shadow(0px 4px 8px #a3a0a0);
+      height: 2rem;
+      width: 6rem;
+    }
+  }
+</style>

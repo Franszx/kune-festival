@@ -1,0 +1,554 @@
+---
+import Layout from "../layout/Layout.astro";
+import Countdown from "../components/Countdown.astro";
+import LineUp from "../components/Line_up.astro";
+import LineUpSmall from "../components/Line_up_small.astro";
+import LineUpMedium from "../components/Line_up_medium.astro";
+import Program from "../components/Program.astro";
+import ArtistCard from "../components/ArtistCard.astro";
+const data3 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/artist?select=id,name,genre,image,size2&limit=9&order=id.asc", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3ZXhudWxkbXJ5YnVocmlweXhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3MzEzODUsImV4cCI6MTk5NDMwNzM4NX0.oiwJey3e46ewy1-kC2D-dKF-l7ESxOX8UV7n1hLOizs",
+  },
+}).then((res) => res.json());
+---
+
+<Layout title="Kune Home">
+  <main>
+    <div class="first">
+      <img class="landingimg" src="/img/kune_landingIMG1.png" alt="" />
+      <div class="landing_content">
+        <h1>MUSIC, ART, PEOPLE, FOOD</h1><h2>19/7-23/7</h2>
+      </div>
+    </div>
+    <div class="second">
+      <a href=""> <p></p></a>
+    </div>
+    <div class="fourth">
+      <a href="line-up"><h1>LINE-UP</h1></a>
+      <div class="boks">
+        <div class="streg"></div>
+        <a href="line-up"> <img class="full_lineup" src="img/full_lineup.svg" alt="" /></a>
+        {
+          data3.map((act) => {
+            return (
+              <a href="#" class="card_wrapper">
+                <ArtistCard name={act.name} size={act.size2} genre={act.genre} image={act.image} />
+              </a>
+            );
+          })
+        }
+        <!-- <a href="#" class="first_card card_large"><ArtistCard size="large" /></a>
+        <a href="#" class="second_card card_large"><ArtistCard size="large" /></a>
+        <a href="#" class="third_card card_small"><ArtistCard size="small" /></a>
+        <a href="#" class="fourth_card card_medium"><ArtistCard size="medium" /></a>
+        <a href="#" class="fifth_card card_large"><ArtistCard size="large" /></a>
+        <a href="#" class="sixth_card card_small"><ArtistCard size="small" /></a>
+        <a href="#" class="seventh_card card_small"><ArtistCard size="small" /></a>
+        <a href="#" class="eighth_card card_medium"><ArtistCard size="medium" /></a>
+        <a href="#" class="ninth_card card_medium"><ArtistCard size="medium" /></a> -->
+      </div>
+    </div>
+    <div class="features">
+      <Program />
+      <p>COUNTDOWN</p>
+      <div class="middle">
+        <Countdown />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  a,
+  a:active,
+  a:link {
+    font-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  body {
+    background-color: #f6d7b0;
+  }
+
+  main {
+    overflow: hidden;
+  }
+
+  .first {
+    position: relative;
+  }
+  .landingimg {
+    min-width: 100%;
+  }
+
+  .landing_content {
+    position: absolute;
+    top: 28%;
+    font-size: 270%;
+    left: 38%;
+    max-width: 55rem;
+    text-align: center;
+    font-family: var(--ff-head);
+    /* font-weight: var(--fw-xb); */
+    color: #fff5e2;
+  }
+
+  .second {
+    background-color: #3c2a10;
+  }
+  .second p::after {
+    content: "BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW";
+    text-align: center;
+    animation: bouncing-text 15s linear infinite alternate;
+    color: #fff5e2;
+    display: block;
+    padding: 0.5rem;
+  }
+  .middle {
+    margin-right: 4rem;
+  }
+  @keyframes bouncing-text {
+    0% {
+      transform: translateX(20%);
+    }
+    100% {
+      transform: translateX(-20%);
+    }
+  }
+
+  /* genbrug hvad du kan*/
+
+  .full_lineup {
+    position: absolute;
+    left: 6%;
+    top: 5%;
+    z-index: 15;
+    background-color: #ded6c1;
+    background-position: center;
+    border-radius: 65px;
+  }
+
+  .full_lineup:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .fourth {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color: #f6d7b0;
+    background-image: url("/img/line_upLanding.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .fourth h1 {
+    font-size: 750%;
+    text-align: center;
+    padding-top: 19%;
+  }
+
+  .boks {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    margin: auto;
+    padding-top: 13%;
+    padding-bottom: 25%;
+  }
+
+  h1,
+  h2 {
+    font-family: var(--ff-head);
+    font-weight: var(--fw-b);
+  }
+
+  .streg {
+    grid-column: 2;
+    border-left: 4px solid #ffae3b;
+    grid-row: 1/7;
+    border-radius: 15px;
+  }
+  .card_wrapper:nth-child(3) {
+    grid-column: 1;
+    margin-left: 28%;
+    margin-top: 16%;
+  }
+
+  .card_wrapper:nth-child(4) {
+    grid-column: 3;
+    margin-left: 13%;
+  }
+
+  .card_wrapper:nth-child(5) {
+    grid-column: 3;
+    margin-top: -22%;
+    margin-left: 62%;
+  }
+
+  .card_wrapper:nth-child(6) {
+    grid-column: 1;
+    margin-top: 4%;
+    margin-left: 56%;
+  }
+
+  .card_wrapper:nth-child(7) {
+    grid-column: 3;
+    margin-top: 0%;
+    margin-left: 7%;
+  }
+
+  .card_wrapper:nth-child(8) {
+    grid-column: 1;
+    margin-top: -22%;
+    margin-left: 30%;
+  }
+
+  .card_wrapper:nth-child(9) {
+    grid-column: 3;
+    margin-top: 0%;
+    margin-left: 55%;
+  }
+  .card_wrapper:nth-child(10) {
+    grid-column: 1;
+    margin-top: -18%;
+    margin-left: 50%;
+  }
+
+  .card_wrapper:nth-child(11) {
+    grid-column: 3;
+    margin-top: 0%;
+    margin-left: 8%;
+  }
+
+  .features {
+    margin-top: -16%;
+  }
+
+  .features p {
+    text-align: center;
+    margin-top: 8%;
+    font-size: 450%;
+    font-family: var(--ff-text);
+    font-weight: var(--fw-b);
+    color: #ffffff;
+    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  }
+  /* Genbrug af ovenstående*/
+
+  @media (max-width: 1450px) {
+    .landing_content {
+      top: 28%;
+      font-size: 230%;
+      left: 44%;
+      right: 8%;
+    }
+    .fourth h1 {
+      font-size: 705%;
+    }
+  }
+
+  @media (max-width: 1405px) {
+    .second p::after {
+      content: "BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW";
+    }
+
+    .fourth h1 {
+      font-size: 625%;
+    }
+
+    .card_wrapper:nth-child(3) {
+      margin-left: 15%;
+    }
+    .card_wrapper:nth-child(5) {
+      margin-left: 85%;
+    }
+    .card_wrapper:nth-child(6) {
+      margin-top: 2%;
+      margin-left: 34%;
+    }
+    .card_wrapper:nth-child(10) {
+      grid-column: 1;
+      margin-top: -18%;
+      margin-left: 40%;
+    }
+    .fourth {
+      background-size: contain;
+    }
+    .full_lineup {
+      left: 6%;
+      top: 3%;
+      width: 10%;
+    }
+  }
+
+  @media (max-width: 1250px) {
+    .landing_content {
+      top: 26%;
+      font-size: 210%;
+      left: 44%;
+      right: 5%;
+    }
+
+    .fourth h1 {
+      font-size: 580%;
+    }
+    .card_wrapper:nth-child(3) {
+      margin-left: 15%;
+      margin-top: 10%;
+    }
+
+    .card_wrapper:nth-child(4) {
+      margin-top: -2%;
+      margin-left: 13%;
+    }
+
+    ..card_wrapper:nth-child(5) {
+      margin-top: -14%;
+      margin-left: 68%;
+    }
+
+    ..card_wrapper:nth-child(6) {
+      margin-top: 2%;
+      margin-left: 40%;
+    }
+
+    /* .fifth_card {
+      grid-column: 3;
+      margin-top: 0%;
+      margin-left: 7%;
+    } */
+
+    .card_wrapper:nth-child(8) {
+      margin-top: -18%;
+      margin-left: 22%;
+    }
+
+    .card_wrapper:nth-child(9) {
+      margin-top: 0%;
+      margin-left: 60%;
+    }
+    ..card_wrapper:nth-child(10) {
+      margin-top: -15%;
+      margin-left: 43%;
+    }
+
+    .card_wrapper:nth-child(11) {
+      grid-column: 3;
+      margin-top: 0%;
+      margin-left: 12%;
+    }
+  }
+
+  @media (max-width: 1215px) {
+    .second p::after {
+      content: "BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW";
+    }
+
+    .fourth h1 {
+      font-size: 560%;
+    }
+  }
+
+  @media (max-width: 1120px) {
+    .fourth h1 {
+      font-size: 530%;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .fourth {
+      background-size: cover;
+    }
+    .card_wrapper:nth-child(3) {
+      margin-left: 12%;
+    }
+
+    .card_wrapper:nth-child(4) {
+      margin-left: 20%;
+    }
+
+    .card_wrapper:nth-child(5) {
+      margin-left: 84%;
+    }
+
+    .card_wrapper:nth-child(6) {
+      margin-left: 41%;
+    }
+
+    .card_wrapper:nth-child(7) {
+      margin-left: 12%;
+    }
+
+    .card_wrapper:nth-child(8) {
+      margin-left: 20%;
+    }
+
+    .card_wrapper:nth-child(9) {
+      margin-top: 0%;
+      margin-left: 60%;
+    }
+    .card_wrapper:nth-child(10) {
+      margin-top: -15%;
+      margin-left: 38%;
+    }
+
+    .card_wrapper:nth-child(11) {
+      grid-column: 3;
+      margin-top: 0%;
+      margin-left: 12%;
+    }
+
+    .full_lineup {
+      left: 8%;
+      top: 5%;
+      width: 8%;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    .landing_content {
+      top: 26%;
+      font-size: 180%;
+      left: 44%;
+      right: 5%;
+    }
+    .landingimg {
+      min-width: 200%;
+      position: relative;
+      top: 0;
+      left: -40%;
+    }
+
+    .second p::after {
+      content: "BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW";
+    }
+
+    .fourth h1 {
+      font-size: 490%;
+    }
+  }
+
+  @media (max-width: 930px) {
+    main {
+      margin: auto;
+    }
+    .landing_content {
+      top: 26%;
+      font-size: 100%;
+      left: 44%;
+      right: 10%;
+    }
+    .second p::after {
+      content: "BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW";
+    }
+
+    .fourth h1 {
+      font-size: 430%;
+    }
+
+    .fourth {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      background-color: #f6d7b0;
+      background-image: url("/img/line_upLanding.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .features p {
+      text-align: center;
+      margin-top: 8%;
+      font-size: 220%;
+      font-family: var(--ff-text);
+      font-weight: var(--fw-b);
+      color: #ffffff;
+    }
+    .full_lineup {
+      left: 18%;
+      top: 6%;
+      width: 8%;
+    }
+    .boks {
+      grid-template-columns: 1fr;
+      margin-top: -5%;
+      gap: 1rem;
+      margin-top: 5rem;
+    }
+    .streg {
+      display: none;
+    }
+    .card_wrapper:nth-child(7),
+    .card_wrapper:nth-child(3),
+    .card_wrapper:nth-child(4) {
+      margin: 0;
+      grid-column: 1;
+      place-self: center;
+    }
+    .card_wrapper:nth-child(5),
+    .card_wrapper:nth-child(6),
+    .card_wrapper:nth-child(8),
+    .card_wrapper:nth-child(9),
+    .card_wrapper:nth-child(10),
+    .card_wrapper:nth-child(11) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 375px) {
+    main {
+      margin: auto;
+    }
+    .fourth {
+      width: 100%;
+      background-color: #f6d7b0;
+      background-image: url("/img/line_upLanding.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .fourth h1 {
+      font-size: 50px;
+      padding-top: 42%;
+    }
+    .boks {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 5rem;
+    }
+    .landing_content {
+      top: 48%;
+      font-size: 80%;
+      left: 14%;
+      right: 12%;
+    }
+    .landingimg {
+      min-width: 300%;
+      position: relative;
+      top: 0;
+      left: -60%;
+    }
+    .features p {
+      text-align: center;
+      margin-top: 8%;
+      font-size: 140%;
+      font-family: var(--ff-text);
+      font-weight: var(--fw-b);
+      color: #ffffff;
+      text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+    }
+    .second p::after {
+      content: "BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW / BUY TICKET NOW";
+      text-align: center;
+      animation: bouncing-text 5s linear infinite alternate;
+      color: #fff5e2;
+      display: block;
+      padding: 0.5rem;
+      font-size: 0.6rem;
+    }
+    /*DER MANGLER SERIØST KÆRLIGHED TIL MiNI-MOBIL-VIEW*/
+  }
+</style>

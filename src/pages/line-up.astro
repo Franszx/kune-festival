@@ -1,0 +1,348 @@
+---
+import Layout from "../layout/Layout.astro";
+import Countdown from "../components/Countdown.astro";
+import ArtistCard from "../components/ArtistCard.astro";
+import Program from "../components/Program.astro";
+const data = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/artist?select=id,name,genre,image,size&limit=7&order=id.asc", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3ZXhudWxkbXJ5YnVocmlweXhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3MzEzODUsImV4cCI6MTk5NDMwNzM4NX0.oiwJey3e46ewy1-kC2D-dKF-l7ESxOX8UV7n1hLOizs",
+  },
+}).then((res) => res.json());
+
+const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/artist?select=id,name,genre,image,size&limit=8&order=id.desc", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3ZXhudWxkbXJ5YnVocmlweXhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3MzEzODUsImV4cCI6MTk5NDMwNzM4NX0.oiwJey3e46ewy1-kC2D-dKF-l7ESxOX8UV7n1hLOizs",
+  },
+}).then((res) => res.json());
+---
+
+<Layout title="Line-up">
+  <main>
+    <div id="cloud_layer">
+      <img src="/img/cloud_3.webp" alt="" />
+      <img src="/img/cloud_1.webp" alt="" />
+      <img src="/img/cloud_2.webp" alt="" />
+      <img src="/img/cloud_3.webp" alt="" />
+      <img src="/img/cloud_1.webp" alt="" />
+      <img src="/img/cloud_3.webp" alt="" />
+      <img src="/img/cloud_2.webp" alt="" />
+      <img src="/img/cloud_3.webp" alt="" />
+      <img src="/img/cloud_1.webp" alt="" />
+      <img src="/img/cloud_1.webp" alt="" />
+      <img src="/img/cloud_3.webp" alt="" />
+      <img src="/img/cloud_2.webp" alt="" />
+    </div>
+    <div id="top_layer">
+      <h2>19/7-23/7</h2>
+      <div class="solh1">
+        <img src="/img/sol.webp" alt="" />
+        <h1>LINE-UP</h1>
+      </div>
+      <div class="artist_grid">
+        <div class="line"></div>
+        <div class="leftside">
+          {
+            data.map((act) => {
+              return (
+                <a href="#">
+                  <ArtistCard image={act.image} name={act.name} genre={act.genre} size={act.size} />
+                </a>
+              );
+            })
+          }
+        </div>
+        <div class="rightside">
+          {
+            data2.map((act) => {
+              return (
+                <a href="#">
+                  <ArtistCard image={act.image} name={act.name} genre={act.genre} size={act.size} />
+                </a>
+              );
+            })
+          }
+        </div>
+      </div>
+      <Program />
+      <p>COUNTDOWN</p>
+      <div class="cd"><Countdown /></div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  document.getElementById("cloud_layer").style.maxHeight = document.getElementById("top_layer").style.height;
+  console.log(document.getElementById("top_layer").style.height);
+</script>
+
+<style>
+  body {
+    background-color: var(--bg-peach);
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  #cloud_layer,
+  #top_layer {
+    grid-area: 1/1/2/2;
+  }
+  #cloud_layer {
+    position: relative;
+    z-index: -1;
+  }
+  #cloud_layer img {
+    position: absolute;
+  }
+
+  #cloud_layer :nth-child(1) {
+    left: 12%;
+    top: 6%;
+  }
+  #cloud_layer :nth-child(2) {
+    top: 8%;
+    left: 50%;
+  }
+  #cloud_layer :nth-child(3) {
+    top: 18%;
+    left: 15%;
+  }
+  #cloud_layer :nth-child(4) {
+    top: 28%;
+    left: 65%;
+  }
+  #cloud_layer :nth-child(5) {
+    top: 38%;
+    left: 32%;
+  }
+  #cloud_layer :nth-child(6) {
+    top: 54%;
+    left: -5%;
+  }
+  #cloud_layer :nth-child(7) {
+    top: 54%;
+    left: 35%;
+  }
+  #cloud_layer :nth-child(9) {
+    top: 68%;
+    right: 2%;
+  }
+  #cloud_layer :nth-child(8) {
+    top: 68%;
+    left: 8%;
+  }
+  #cloud_layer :nth-child(10) {
+    top: 78%;
+    left: 12%;
+  }
+  #cloud_layer :nth-child(11) {
+    top: 86%;
+    right: 8%;
+  }
+  #cloud_layer :nth-child(12) {
+    top: 96%;
+    left: 35%;
+  }
+  h2 {
+    text-align: center;
+    padding-top: 7rem;
+    padding-right: 1rem;
+  }
+  .solh1 {
+    display: grid;
+    place-items: center;
+  }
+  .solh1 img {
+    grid-area: 1/1/2/2;
+  }
+  .solh1 h1 {
+    grid-area: 1/1/2/2;
+  }
+  .artist_grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-items: center;
+    margin-inline: 5rem;
+    margin-bottom: 6rem;
+  }
+  .leftside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 21rem 11rem 6rem 21rem 10rem 7rem 21rem;
+    position: relative;
+    width: 80%;
+  }
+  .rightside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem 7rem 21rem 10rem 7rem 22rem 10rem;
+    position: relative;
+    width: 80%;
+  }
+  .leftside :nth-child(2n + 1) {
+    justify-self: right;
+    position: relative;
+  }
+  .leftside :nth-child(2n + 2) {
+    justify-self: left;
+    position: relative;
+  }
+  .rightside :nth-child(2n + 1) {
+    justify-self: right;
+    position: relative;
+  }
+  .rightside :nth-child(2n + 2) {
+    justify-self: left;
+    position: relative;
+  }
+  .line {
+    width: 5px;
+    height: 100%;
+    border-radius: 3px;
+    background-color: #ffae3b;
+    grid-area: 1/2/10/3;
+  }
+  h1 {
+    font-family: var(--ff-head);
+    font-weight: var(--fw-xb);
+    font-size: 8rem;
+  }
+  h2 {
+    font-family: var(--ff-head);
+    font-weight: var(--fw-b);
+    font-size: 3rem;
+  }
+  .cd {
+    margin-right: 4rem;
+  }
+  p {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 4.5rem;
+    font-family: var(--ff-text);
+    font-weight: var(--fw-b);
+    color: var(--white);
+    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  }
+  @media (max-width: 1250px) {
+    #cloud_layer img {
+      scale: 0.8;
+    }
+  }
+  @media (max-width: 930px) {
+    .leftside {
+      width: 90%;
+      grid-template-rows: repeat(7, 17rem);
+    }
+    .rightside {
+      width: 90%;
+      grid-template-rows: repeat(8, 17rem);
+    }
+    h2 {
+      padding-top: 9rem;
+      font-size: 2.5rem;
+      padding-right: 0.5rem;
+    }
+    .solh1 img {
+      height: 400px;
+    }
+    .solh1 h1 {
+      font-size: 7rem;
+    }
+    #cloud_layer img {
+      scale: 0.7;
+    }
+  }
+  @media (max-width: 750px) {
+    .artist_grid {
+      grid-template-columns: 1fr;
+    }
+    .line {
+      display: none;
+    }
+    .leftside {
+      width: 100%;
+      gap: 0.5rem;
+      grid-template-rows: auto;
+    }
+    .rightside {
+      width: 100%;
+      gap: 0.5rem;
+      grid-template-rows: auto;
+    }
+    .rightside :nth-child(2n + 2) {
+      justify-self: right;
+    }
+    .rightside :nth-child(2n + 1) {
+      justify-self: left;
+    }
+    h2 {
+      padding-top: 7rem;
+      font-size: 2rem;
+    }
+    .solh1 img {
+      height: 350px;
+    }
+    .solh1 h1 {
+      font-size: 6rem;
+    }
+    p {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 3.5rem;
+    }
+    #cloud_layer img {
+      scale: 0.6;
+    }
+    #cloud_layer :nth-child(2) {
+      left: 20%;
+    }
+    #cloud_layer :nth-child(4) {
+      left: 35%;
+    }
+    #cloud_layer :nth-child(5) {
+      left: 18%;
+    }
+    #cloud_layer :nth-child(7) {
+      left: 20%;
+    }
+    #cloud_layer :nth-child(12) {
+      left: 18%;
+    }
+  }
+  @media (max-width: 500px) {
+    h2 {
+      padding-top: 7rem;
+      font-size: 2rem;
+    }
+    .solh1 img {
+      height: 300px;
+    }
+    .solh1 h1 {
+      font-size: 5rem;
+    }
+    p {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 2.5rem;
+    }
+  }
+  @media (max-width: 375px) {
+    h2 {
+      padding-top: 5rem;
+      font-size: 1.5rem;
+    }
+    .solh1 img {
+      height: 250px;
+    }
+    .solh1 h1 {
+      font-size: 4rem;
+    }
+    .artist_grid {
+      margin: 0;
+    }
+  }
+</style>

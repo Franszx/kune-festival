@@ -1,0 +1,74 @@
+---
+---
+
+<nav class="pink_nav">
+  <!-- <img src="/img/logo.svg" alt="" /> -->
+  <a href="#">PROGRAM</a>
+  <a href="#">TICKETS</a>
+  <a href="#">VOLUNTEER</a>
+  <a href="/line-up">LINE-UP</a>
+  <a href="#">INFO</a>
+  <a href="/about">ABOUT</a>
+  <!-- <img src="/img/nav_bg.webp" alt="" /> -->
+</nav>
+
+<script src="../scripts/burger.js"></script>
+
+<style>
+  nav {
+    display: block;
+    position: fixed;
+    z-index: 16;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-pink);
+    padding-top: 10rem;
+    transition: 0.8s;
+    background-size: cover;
+    background-image: url(/img/nav_bg.webp);
+    background-position: center;
+  }
+  nav.is-active {
+    left: 0;
+  }
+  nav img {
+    position: absolute;
+    left: 0;
+    aspect-ratio: 1890/1417;
+    width: 100%;
+    opacity: 0.5;
+    /* bottom: 0; */
+    /* left: 100%; */
+    /* height: auto; */
+    /* z-index: 99; */
+    /* margin-top: 0rem; */
+    height: auto;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+  }
+  nav a {
+    display: block;
+    opacity: 1;
+    z-index: 5;
+    position: relative;
+    text-decoration: none;
+    color: var(--white);
+    font-family: var(--ff-head);
+    font-weight: 800;
+    font-size: 3rem;
+    width: 100%;
+    max-width: 25rem;
+    text-align: center;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out;
+  }
+  nav a:hover {
+    color: #16a085;
+    /* opacity: 86%; */
+    color: var(--button-green);
+  }
+  /* @media (min-width: 1000px) {
+  } */
+</style>

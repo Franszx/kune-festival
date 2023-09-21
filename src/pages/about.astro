@@ -1,0 +1,209 @@
+---
+import Layout from "../layout/Layout.astro";
+---
+
+<Layout title="About KUNE">
+  <main>
+    <div class="mediumspacer1"></div>
+    <div class="mediumspacer1"></div>
+    <div class="main_div">
+      <div class="first_aboutdiv"></div>
+      <div class="wrap-around">
+        <h1 class="h1-about">ABOUT</h1>
+        <div class="mediumspacer"></div>
+        <div class="grid-2">
+          <div class="color_div">
+            <h3>KUNE</h3>
+            <p class="paragraph">
+              Being at KUNE Festival is an immersive experience that blends art, music, and the island’s natural beauty. The location’s secludedness adds to the sense of separation from everyday life.<br /><br /> At the same time, the art invites us to engage in open discussions and
+              imagine a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience representative of the modern, young Nordic artistic community.<br />Most importantly, we
+              strive to build an environment that values and celebrates what we call the ‘Othe rness’ of the world. <br /><br />The Otherness is a concept that acknowledges the existence of people who may be similar to us in many ways yet possess traits, values, and
+              characteristics that set them apart as “other.” <br /><br />Humans share a great deal in common, but we are also remarkably diverse regarding cultural or social norms, habits, or behavior. The Otherness element recognizes this diversity and encourages us to
+              acknowledge, appreciate, and celebrate our differences. By embracing the Otherness, we create a more inclusive, compassionate, and open-minded world.
+            </p>
+          </div>
+          <div class="color_div">
+            <p class="paragraph">
+              Rather than viewing differences as a source of conflict or division, we recognize them as a source of strength and beauty. <br /><br />The Otherness element invites us to see the world through the eyes of others, to listen to their stories, and to appreciate their
+              unique perspectives. In doing so, we expand our horizons and gain a more complex understanding of what it means to be human.On the more practical side of things, KUNE Festival is an NGO made up of over 30 passionate and dedicated individuals who work voluntarily
+              year-round to create this extraordinary experience. <br /><br />Our team is comprised of artists, musicians, designers, writers, project managers, and cultural enthusiasts, all united by our shared vision and values. We are motivated by the belief that art and
+              culture have the power to create positive change in the world, and we are committed to working towards this goal by creating a unique platform that celebrates the Nordic underground talent.<br /><br /> Our team is inspired by the creative community that we are building,
+              and we are continually amazed by the skills and dedication of our members.
+            </p>
+          </div>
+        </div>
+        <div class="mediumspacer"></div>
+        <div class="grid-2">
+          <div class="color_div">
+            <h3>The Location</h3>
+            <p class="paragraph">
+              The location The island is a decommissioned defense fort built in the 19th century. A unique landmark with historical value, the fort-island was recently renovated and repurposed into a place dedicated to young people and innovative cultural initiatives. <br />
+              It can host 2500 people, 1000 of which could be accommodated in the camping area. <br /><br />Traveling to KUNE Festival by boat for a 30-minute journey to an island location adds a unique and significant element to the festival experience. Reaching the festival
+              site by boat separates us from our everyday lives and creates a sense of escape to a new world. The festival island becomes a self-contained microcosm where everyone is living, breathing, and experiencing the festival together. This close-knit community setting
+              creates a petri dish for social interactions, where we can connect and bond in a way that is impossible in our everyday lives.<br /><br /> This unique location provides a striking contrast between its historical purpose of aggression and its current function as a hub
+              for a cultural celebration. The island’s transformation into a place dedicated to youth and innovative cultural initiatives highlights the shift from conflict to community and symbolizes hope and possibility. <br /><br />By hosting the festival on this historic
+              site, we aim to offer a powerful reminder of the positive impact art and culture can have on society and their role in bringing people together and fostering understanding and connection.
+            </p>
+          </div>
+          <div class="color_div_2"><img class="kune_img" src="/img/KUNE7Logo7.png" alt="" /></div>
+
+          <div class="mediumspacer"></div>
+          <div class="mediumspacer"></div>
+          <div class="mediumspacer"></div>
+          <!-- <img src="img/about22.webp" alt="" /> -->
+          <!-- <img src="/img/UØ_KUNE22.webp" alt="" /> -->
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+<style>
+  .mediumspacer {
+    height: 5rem;
+    width: 5rem;
+  }
+  .mediumspacer1 {
+    height: 5rem;
+    width: 5rem;
+  }
+  main {
+    background: var(--bg-blue);
+    background-image: url(/img/about22.webp);
+    background-position: left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  }
+  .main_div {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 4rem;
+    text-align: left;
+  }
+  .wrap-around {
+    margin: 0 1rem 0 1rem;
+  }
+  .grid-2 {
+    gap: 1rem;
+  }
+  .h1-about {
+    font-family: var(--ff-head);
+    font-weight: 700;
+    font-size: 60px;
+    padding-left: 2rem;
+  }
+  .kune_img {
+    margin-top: 2rem;
+    width: 50%;
+  }
+  .kune_h3 {
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+  .color_div {
+    background-color: #d9d9d9a8;
+    opacity: 0.9;
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .color_div_2 {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #d9d9d9a8; */
+    opacity: 0.9;
+    padding: 2rem;
+    align-items: center;
+  }
+  h3 {
+    font-family: var(--ff-head);
+
+    margin-bottom: 1rem;
+    font-size: 30px;
+  }
+  p {
+    font-family: var(--ff-text);
+    text-align: left;
+    line-height: 1.6rem;
+  }
+  @media (min-width: 1000px) {
+    main {
+      background: var(--bg-blue);
+      background-image: url(/img/about22.webp);
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      max-width: 1200vw;
+    }
+    .mediumspacer1 {
+      height: 0;
+      width: 0;
+    }
+    .main_div {
+      margin: auto;
+      padding-bottom: 4rem;
+      text-align: left;
+    }
+    .first_aboutdiv {
+      height: 20rem;
+      width: 100%;
+      top: 0;
+    }
+    .color_div {
+      background-color: #d9d9d9a8;
+      opacity: 0.9;
+      padding: 2rem;
+      margin: 0;
+      max-width: 50rem;
+    }
+
+    .kune_img {
+      margin-top: 15rem;
+    }
+
+    .color_div_2 {
+      display: flex;
+      flex-direction: column;
+      /* background-color: #d9d9d9a8; */
+      opacity: 0.9;
+      padding: 2rem;
+      align-items: center;
+    }
+    .h1-about {
+      font-family: var(--ff-head);
+      font-weight: 700;
+      font-size: 93px;
+      padding-left: 2rem;
+    }
+    h3 {
+      font-family: var(--ff-head);
+      margin-bottom: 1rem;
+      font-size: 30px;
+    }
+    .wrap-around {
+      margin: 0 5rem 0 5rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 2rem;
+      justify-items: flex-start;
+    }
+
+    p {
+      font-family: var(--ff-text);
+      text-align: left;
+      line-height: 1.6rem;
+    }
+    img {
+      max-width: 60%;
+    }
+  }
+</style>

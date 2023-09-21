@@ -1,0 +1,86 @@
+---
+import Menu from "./Menu.astro";
+import TicketButton from "../components/TicketButton.astro";
+---
+
+<div class="header">
+  <a href="/"><img class="logo" src="/img/logo.svg" alt="" /></a>
+  <div class="right_side">
+    <TicketButton />
+    <Menu />
+  </div>
+</div>
+
+<style>
+  .header {
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    /* background-color: rgb(57, 85, 76); */
+    width: 100%;
+    height: 150px;
+    justify-content: space-between;
+  }
+  .logo {
+    margin-top: 40px;
+    margin-left: 40px;
+    aspect-ratio: 198/90;
+    height: 90px;
+  }
+
+  .right_side {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+    margin-right: 56px;
+    align-items: center;
+  }
+
+  @media (max-width: 930px) {
+    .logo {
+      margin-top: 30px;
+      margin-left: 30px;
+      height: 75px;
+    }
+    .right_side {
+      gap: 3rem;
+      margin-top: 1.5rem;
+      margin-right: 30px;
+    }
+    .header {
+      height: 115px;
+    }
+  }
+  @media (max-width: 750px) {
+    .logo {
+      margin-top: 20px;
+      margin-left: 20px;
+      height: 65px;
+    }
+    .right_side {
+      gap: 2rem;
+      margin-top: 0.75rem;
+      margin-right: 20px;
+    }
+    .header {
+      height: 90px;
+    }
+  }
+  @media (max-width: 425px) {
+    .logo {
+      margin-top: 10px;
+      margin-left: 10px;
+      height: 50px;
+    }
+    .right_side {
+      gap: 1rem;
+      margin-top: 0.1rem;
+      margin-right: 10px;
+    }
+    .header {
+      height: 70px;
+    }
+  }
+</style>
+
+<script></script>

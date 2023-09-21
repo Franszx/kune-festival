@@ -1,0 +1,102 @@
+:root {
+  /* colors */
+  --primary: ;
+  --secondary: ;
+  --tertiary: ;
+  --accent: ;
+  --black: #000;
+  --bg-peach: #f6d7b0;
+  --bg-blue: #beddfe;
+  --button-green: #35ac94;
+  --brown: #3c2a10;
+  --white: #fff;
+  --bg-pink: #fadadd;
+
+  /* spaces for margins and paddings */
+  --space-xxs: calc(var(--space-sm) * 0.25);
+  --space-xs: calc(var(--space-sm) * 0.5);
+  --space-sm: 1rem;
+  --space-md: calc(var(--space-sm) * 1.5);
+  --space-lg: calc(var(--space-sm) * 2);
+  --space-xl: calc(var(--space-sm) * 3);
+  --space-xxl: calc(var(--space-sm) * 6);
+
+  /* font-families */
+  --ff-text: "Karla", sans-serif, cursive;
+  --ff-head: "Montserrat", sans-serif, cursive;
+
+  /* font-weights */
+  --fw-r: 400;
+  --fw-sb: 600;
+  --fw-b: 700;
+  --fw-xb: 800;
+
+  /* font-sizes */
+  --fs-n: 1rem;
+  --fs-p: calc(var(--fs-g) * 1.1);
+  --fs-1: calc(var(--fs-g) * 2.8);
+  --fs-2: calc(var(--fs-g) * 2);
+  --fs-3: calc(var(--fs-g) * 1.5);
+
+  /* border-radii */
+  --br-xs: 2px;
+  --br-s: 5px;
+  --br-l: 10px;
+  --br-xl: 20px;
+  --br-xxl: 50px;
+}
+/* resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+/* imports */
+@font-face {
+  font-family: "Karla";
+  src: url(../fonts/Karla-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Karla";
+  src: url(../fonts/Karla-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Karla";
+  src: url(../fonts/Karla-ExtraBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("montserrat") url(../fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("montserrat") url(../fonts/Montserrat-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("montserrat") url(../fonts/Montserrat-ExtraBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* styling */
